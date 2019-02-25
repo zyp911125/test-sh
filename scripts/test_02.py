@@ -3,6 +3,7 @@ import allure
 
 class Test_allure:
     def setup(self):
+        print("test")
         pass
 
     def teardown(self):
