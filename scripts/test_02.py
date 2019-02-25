@@ -20,6 +20,18 @@ class Test_allure:
         print("登录")
 
         assert 1
+     
+    @allure.step(title="注册的测试脚本")
+    @pytest.allure.severity(pytest.allure.severity_level.MINOR)
+    def test_zhuce(self):
+        allure.attach('输入用户名', '输入用户名的描述')
+        print("输入用户名")
+        allure.attach("输入密码","输入密码的描述")
+        print("输入密码")
+        allure.attach("注册", "注册的描述")
+        print("注册")
+
+        assert 0
 
     # @pytest.mark.parametrize("a", [1, 2, 3])
     # @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
